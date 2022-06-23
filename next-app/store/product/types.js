@@ -5,6 +5,9 @@ export const GET_PRODUCT_FAIL = "GET_PRODUCT_FAIL";
 export const ADD_TO_CART_SUCCESS='ADD_TO_CART_SUCCESS'
 export const REMOVE_FROM_CART_SUCCESS='REMOVE_FROM_CART_SUCCESS'
 
+export const INCREAMENT_QUANTITY_SUCCESS='INCREAMENT_QUANTITY_SUCCESS'
+export const DECREAMENT_QUANTITY_SUCCESS='DECREAMENT_QUANTITY_SUCCESS'
+
 export const getProductRequest = () => ({
     type: GET_PRODUCT_REQUEST
   });
@@ -29,5 +32,19 @@ export const addToCartSuccess = (id) => ({
 
 export const RemoveCartSuccess = (id) => ({
   type: REMOVE_FROM_CART_SUCCESS,
+  payload: id
+});
+
+//incremet quantity
+
+export const IncreamentSuccess = (id) => ({
+  type: INCREAMENT_QUANTITY_SUCCESS,
+  payload: id
+});
+
+//decrement quantity
+
+export const DecreamentSuccess = (id) => ({
+  type: DECREAMENT_QUANTITY_SUCCESS,
   payload: id
 });
